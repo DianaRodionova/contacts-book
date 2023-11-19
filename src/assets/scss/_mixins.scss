@@ -1,0 +1,33 @@
+@mixin h1() {
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  line-height: 16px;
+
+  text-transform: uppercase; 
+
+  @media (min-width: $screen-big) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@mixin h2() {
+  font-size: 24px;
+  font-weight: $font-weight-bold;
+  line-height: 29px;
+
+  @media (min-width: $screen-big) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+@mixin label() {
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  line-height: 16px;
+
+  @media (min-width: $screen-big) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: $font-family-custom;
+  src:
+    url('#{$font-path}ProximaNova-Bold.woff2') format('woff2'),
+    url('#{$font-path}ProximaNova-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: $font-family-custom;
+  src:
+    url('#{$font-path}ProximaNova-Regular.woff2') format('woff2'),
+    url('#{$font-path}ProximaNova-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}

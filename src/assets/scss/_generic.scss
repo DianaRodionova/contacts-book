@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &:link {
+    color: inherit;
+  }
+}
+
+html,
+body,
+#app {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#app {
+  flex-grow: 1;
+}
+
+html {
+  font-family: $font-family;
+  font-size: 100%;
+
+  overflow-y: scroll;
+
+  height: 100%;
+
+  color: $emperor;
+  background-color: $white;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.6;
+
+  position: relative;
+
+  min-width: $page-min-width;
+}
+
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &:not([class]) {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+a,
+button,
+input {
+  &:focus {
+    outline: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:-webkit-any-link,
+  &:-webkit-any-link:active,
+  &:visited {
+    color: inherit;
+  }
+}
+
+input,
+button {
+  padding: 0;
+
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+button {
+  font-family: $font-family;
+
+  cursor: pointer;
+ }
+
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+legend {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+
+  float: left;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  white-space: normal;
+  color: inherit;
+}
+
+table {
+  width: 100%;
+
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
+}

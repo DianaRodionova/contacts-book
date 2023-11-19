@@ -1,0 +1,52 @@
+/**
+ * Colors
+ * Название переменной конкретного цвета генерируется на http://chir.ag/projects/name-that-color/
+ */
+ $white: #FFFFFF;
+ $hawkes-blue: #EAF2FD;
+ $emperor: #545454;
+ $mine-shaft: #282828;
+ $alto: #E0E0E0;
+ $zircon: #F9FCFF;
+ $grey: #DDDDDD;
+ $royal-blue: #2F80ED;
+ $regent-st-blue: #94B5E1;
+ $nobel: #B5B5B5;
+ $supernova: #FFC700;
+ $silver-chalice: #A9A9A9;
+ $burnt-sienna: #EB5757;
+ $mustard: #FFD84C;
+ $ripe-lemon: #F3C41E;
+ $persian-blue: #1A3CC1;
+
+ /**
+ * Fonts
+ */
+$font-path: '~@/assets/fonts/';
+$font-family-default: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+ -apple-system, BlinkMacSystemFont, 'Segoe UI',
+'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family-custom: 'Proxima Nova';
+$font-family: $font-family-custom, $font-family-default;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+$page-min-width: 376px;
+
+/**
+ * Breakpoints
+ */
+ $screen-huge: 1920px;
+ $screen-large: 1200px;
+ $screen-big: 992px;
+ $screen-medium: 768px;
+ $screen-small: 576px;
+ $screen-tiny: 376px;
+
+/**
+ * Miscellaneous
+ */
+$border-radius: 4px;
+
+$box-shadow: 0 0 6px 0 rgba($regent-st-blue, 0.35);
