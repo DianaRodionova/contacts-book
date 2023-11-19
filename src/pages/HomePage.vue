@@ -4,18 +4,16 @@
   </page-header>
 
   <div class="page-main">
-    <div class="subheader">
-      <div class="subheader-container">
-        <drop-down class="subheader__dropdown" />
+    <div class="page-main__subheader">
+      <div class="page-main__subheader-container">
+        <drop-down />
 
         <oval-button @click="getCreatingContactPage" />
       </div>
     </div>
 
-    <div class="contacts">
-      <div class="main-container">
-        <contact-table />
-      </div>
+    <div class="page-main__main-container">
+      <contact-table />
     </div>
   </div>
 </template>
@@ -40,41 +38,41 @@
   flex-grow: 1;
 
   background-color: $white;
-}
 
-.subheader-container,
-.main-container {
-  margin: 0 auto;
-  padding: 12px;
+  &__subheader-container,
+  &__main-container {
+    margin: 0 auto;
+    padding: 12px;
 
-  @media (min-width: $screen-medium) {
-    padding-right: 32px;
-    padding-left: 32px;
+    @media (min-width: $screen-medium) {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+
+    @media (min-width: $screen-large) {
+      max-width: 990px;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
-  @media (min-width: $screen-large) {
-    max-width: 990px;
-    padding-right: 0;
-    padding-left: 0;
+  &__subheader-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-top: 8px;
+    padding-bottom: 7px;
   }
-}
 
-.subheader-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  &__subheader {
+    border-bottom: 1px solid $hawkes-blue;
+    background-color: $zircon;
 
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.subheader {
-  border-bottom: 1px solid $hawkes-blue;
-  background-color: $zircon;
-
-  &__dropdown {
-    margin-right: 16px;
+    &__dropdown {
+      margin-right: 16px;
+    }
   }
 }
 </style>

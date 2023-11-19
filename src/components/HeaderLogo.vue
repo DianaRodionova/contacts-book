@@ -19,9 +19,15 @@
     height: 24px;
     margin-right: 4px;
 
+    @media (min-width: $screen-small) {
+      margin-right: 8px;
+    }
+
     @media (min-width: $screen-big) {
       width: 42px;
       height: 32px;
+
+      margin-right: 16px;
     }
   }
 

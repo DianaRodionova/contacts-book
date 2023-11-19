@@ -75,10 +75,14 @@
   cursor: pointer;
 
   border: 1px solid $grey;
-  border-radius: 4px;
+  border-radius: $border-radius;
 
   @media (min-width: $screen-small) {
     width: 235px;
+  }
+
+  @media (min-width: $screen-big) {
+    height: 40px;
   }
 
   &:hover {
@@ -91,6 +95,11 @@
     justify-content: space-between;
 
     padding: 6px 8px;
+
+    @media (min-width: $screen-big) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
     &-icon {
       &.active {

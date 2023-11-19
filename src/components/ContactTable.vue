@@ -1,5 +1,10 @@
 <template>
   <table class="table">
+    <col class="table__column-one">
+    <col class="table__column-two">
+    <col class="table__column-three">
+    <col class="table__column-four">
+
     <thead class="table__header">
       <tr>
         <th class="table__title">Контакт</th>
@@ -14,16 +19,16 @@
 
     <tbody v-else class="table__body">
       <tr v-for="contact in filteredContacts" :key="contact.id" class="table__list" @click="getContact(contact.id)">
-        <td class="table__item name">
+        <td class="table__item">
           <div class="table__item-name">
           <contact-avatar class="table__avatar" :text="placeholderText(contact)" size="medium" /> 
           
           <span>{{ contact.name }}</span>
-        </div>
+          </div>
         </td>
-        <td v-if="isWidthScreen768" class="table__item tel">{{ contact.tel }}</td>
-        <td v-if="isWidthScreen768" class="table__item email">{{ contact.email }}</td>
-        <td v-else class="table__item tel">
+        <td v-if="isWidthScreen768" class="table__item">{{ contact.tel }}</td>
+        <td v-if="isWidthScreen768" class="table__item">{{ contact.email }}</td>
+        <td v-else class="table__item">
           {{ contact.tel }}
           <br />
           {{ contact.email }}
@@ -82,6 +87,72 @@
   .table {
     min-width: 352px;
 
+    &__column-one {
+      width: 147px;
+
+      @media (min-width: $screen-small) {
+        width: 192px;
+      }
+
+      @media (min-width: $screen-medium) {
+        width: 248px;
+      }
+
+      @media (min-width: $screen-big) {
+        width: 362px;
+      }
+
+      @media (min-width: $screen-large) {
+        width: 383px;
+      }
+    }
+
+    &__column-two {
+      width: 147px;
+
+      @media (min-width: $screen-small) {
+        width: 240px;
+      }
+
+      @media (min-width: $screen-medium) {
+        width: 120px;
+      }
+
+      @media (min-width: $screen-big) {
+        width: 178px;
+      }
+
+      @media (min-width: $screen-large) {
+        width: 199px;
+      }
+    }
+
+    &__column-three {
+      width: 58px;
+
+      @media (min-width: $screen-medium) {
+        width: 224px;
+      }
+
+      @media (min-width: $screen-big) {
+        width: 274px;
+      }
+
+      @media (min-width: $screen-large) {
+        width: 295px;
+      }
+    }
+
+    &__column-four {
+      @media (min-width: $screen-small) {
+        width: 120px;
+      }
+
+      @media (min-width: $screen-medium) {
+        width: 112px;
+      }
+    }
+
     &__header {
       font-size: 10px;
       line-height: 16px;
@@ -96,74 +167,10 @@
     &__title {
       font-weight: $font-weight-regular;
 
-      min-width: 143px;
-      width: 42%;
-
       text-align: left;
-      &.name {
-        @media (min-width: $screen-small) {
-          min-width: 192px;
-        }
-
-        @media (min-width: $screen-medium) {
-          min-width: 248px;
-        }
-
-        @media (min-width: $screen-big) {
-          min-width: 362px;
-        }
-
-        @media (min-width: $screen-large) {
-          min-width: 383px;
-        }
-      }
-
-      &.tel {
-        @media (min-width: $screen-small) {
-          min-width: 240px;
-        }
-
-        @media (min-width: $screen-medium) {
-          min-width: 120px;
-        }
-
-        @media (min-width: $screen-big) {
-          min-width: 178px;
-        }
-
-        @media (min-width: $screen-large) {
-          min-width: 199px;
-        }
-      }
-
-      &.email {
-        @media (min-width: $screen-medium) {
-          min-width: 224px;
-        }
-
-        @media (min-width: $screen-big) {
-          min-width: 274px;
-        }
-
-        @media (min-width: $screen-large) {
-          min-width: 295px;
-        }
-      }
 
       &.date {
-        min-width: 58px;
-        width: 16%;
-
         text-align: right;
-
-        @media (min-width: $screen-small) {
-          min-width: 120px;
-        }
-
-        @media (min-width: $screen-medium) {
-          min-width: 112px;
-          width: 112px;
-        }
       }
     }
 
@@ -177,6 +184,10 @@
 
       cursor: pointer;
 
+      @media (min-width: $screen-small) {
+        height: 48px;
+      }
+
       &:hover {
         background-color: $hawkes-blue;
       }
@@ -185,9 +196,6 @@
     &__item {
       font-size: 12px;
       line-height: 15px;
-
-      min-width: 143px;
-      width: 42%;
     
       border-bottom: 1px solid $hawkes-blue;
 
@@ -203,75 +211,17 @@
         align-items: center;
       }
 
-      &.name {
-        @media (min-width: $screen-small) {
-          min-width: 192px;
-        }
-
-        @media (min-width: $screen-medium) {
-          min-width: 248px;
-        }
-
-        @media (min-width: $screen-big) {
-          min-width: 362px;
-        }
-
-        @media (min-width: $screen-large) {
-          min-width: 383px;
-        }
-      }
-
-      &.tel {
-        @media (min-width: $screen-small) {
-          min-width: 240px;
-        }
-
-        @media (min-width: $screen-medium) {
-          min-width: 120px;
-        }
-
-        @media (min-width: $screen-big) {
-          min-width: 178px;
-        }
-
-        @media (min-width: $screen-large) {
-          min-width: 199px;
-        }
-      }
-
-      &.email {
-        @media (min-width: $screen-medium) {
-          min-width: 224px;
-        }
-
-        @media (min-width: $screen-big) {
-          min-width: 274px;
-        }
-
-        @media (min-width: $screen-large) {
-          min-width: 295px;
-        }
-      }
-
       &.date {
         font-size: 10px;
         line-height: 16px;
 
-        min-width: 58px;
-        width: 16%;
+        width: 58px;
 
         text-align: right;
 
         @media (min-width: $screen-small) {
           font-size: 12px;
           line-height: 20px;
-
-          min-width: 120px;
-        }
-
-        @media (min-width: $screen-medium) {
-          min-width: 112px;
-          width: 112px;
         }
 
         @media (min-width: $screen-large) {

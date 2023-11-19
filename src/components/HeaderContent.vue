@@ -52,7 +52,7 @@
       top: 8px;
       right: 12px;
 
-      @media (min-width: $screen-big) {
+      @media (min-width: $screen-medium) {
         right: 32px;
       }
     }
