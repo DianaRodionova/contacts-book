@@ -144,9 +144,7 @@
     }
 
     &__column-four {
-      @media (min-width: $screen-small) {
-        width: 120px;
-      }
+      width: 0;
 
       @media (min-width: $screen-medium) {
         width: 112px;
